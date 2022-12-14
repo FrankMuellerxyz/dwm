@@ -23,6 +23,6 @@ ModKey is the Windows Key (Mod4Mask)
 
 ## gdm installation
 
-Copy gdm/dwm.desktop to /usr/share/xsessions/
-Copy gdm/dwm-start to   /usr/local/bin/
-Change permissions to root and dwm-start must be executable
++ Copy gdm/dwm.desktop to /usr/share/xsessions/
++ Copy gdm/dwm-start to   /usr/local/bin/
++ Change permissions to root and dwm-start must be executable
