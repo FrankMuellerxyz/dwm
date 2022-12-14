@@ -1,0 +1,15 @@
+#!/bin/sh
+
+#xsetroot -solid black
+
+# Statusbar loop
+while true; do
+	xsetroot -name "$( date +"%a %b %d %H:%M:%S" )"
+	sleep 1
+done &
+
+/usr/bin/nm-applet &
+/usr/bin/picom &
+feh --bg-scale /home/neet/media/picture/wall.png &
+
+exec /usr/local/bin/dwm > /dev/null
