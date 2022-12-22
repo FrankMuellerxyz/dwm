@@ -12,6 +12,7 @@ ModKey is the Windows Key (Mod4Mask)
 + MODKEY + Shift + e 	= exit dwm
 
 + volume controls with x86 keys (up,down,mute)
++ multimedia controls with x86 keys using playerctl
 
 # Dependencies
 + alacritty
