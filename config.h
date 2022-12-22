@@ -71,7 +71,12 @@ static const char *upvol[] = 	{ "pamixer", "-i", "5", NULL};
 static const char *downvol[] = 	{ "pamixer", "-d", "5", NULL};
 static const char *mutevol[] = 	{ "pamixer", "-t", NULL};
 
-static const char *pav[] = 		{ "pavucontrol", NULL};
+// multimedia
+//static const char *pav[] = 		{ "pavucontrol", NULL};
+static const char *playpause[] 	= 	{ "playerctl", "play-pause", NULL};
+static const char *next[] 		= 	{ "playerctl", "next", NULL};
+static const char *previous[] 	= 	{ "playerctl", "previous", NULL};
+static const char *stop[] 		= 	{ "playerctl", "stop", NULL};
 
 
 
@@ -89,6 +94,13 @@ static const Key keys[] = {
 	{ 0,		XF86XK_AudioLowerVolume, 		spawn, {.v = downvol } },
 	{ 0,       	XF86XK_AudioMute, 				spawn, {.v = mutevol } },
 	{ 0,       	XF86XK_AudioRaiseVolume, 		spawn, {.v = upvol   } },
+
+	{ 0,       	XF86XK_AudioPlay, 				spawn, {.v = playpause } },
+	{ 0,       	XF86XK_AudioNext, 				spawn, {.v = next } },
+	{ 0,       	XF86XK_AudioPrev, 				spawn, {.v = previous } },
+	{ 0,       	XF86XK_AudioStop, 				spawn, {.v = stop } },
+
+
 
 	{ MODKEY|ShiftMask,             XK_e,      quit,           {0} },
 	{ MODKEY|ShiftMask,             XK_q,      killclient,     {0} },
