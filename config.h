@@ -90,6 +90,8 @@ static const Key keys[] = {
 	{ MODKEY,            			XK_Return, 	spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_b, 		spawn,          {.v = browser } },
 	{ MODKEY|ShiftMask,             XK_i, 		spawn,          {.v = browser_private } },
+	{ MODKEY,             			XK_w, 		spawn,          {.v = firefox } },
+
 
 	{ 0,		XF86XK_AudioLowerVolume, 		spawn, {.v = downvol } },
 	{ 0,       	XF86XK_AudioMute, 				spawn, {.v = mutevol } },
