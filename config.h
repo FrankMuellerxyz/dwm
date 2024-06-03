@@ -59,23 +59,23 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 // programs
-static const char *termcmd[]  = { "alacritty", NULL };
+static const char *termcmd[]  		= { "alacritty", NULL };
 
-static const char *browser[] = { "brave", NULL};
-static const char *browser_private[] = { "brave", "--incognito", NULL};
+static const char *browser[] 		= { "thorium-browser", NULL};
+static const char *browser_private[] 	= { "thorium-browser", "--incognito", NULL};
 
-static const char *firefox[] = { "firefox", NULL};
+static const char *firefox[] 		= { "firefox", NULL};
 
 // volume controls
-static const char *upvol[] = 	{ "pamixer", "-i", "5", NULL};
-static const char *downvol[] = 	{ "pamixer", "-d", "5", NULL};
-static const char *mutevol[] = 	{ "pamixer", "-t", NULL};
+static const char *upvol[] 	= 	{ "pamixer", "-i", "5", NULL};
+static const char *downvol[] 	= 	{ "pamixer", "-d", "5", NULL};
+static const char *mutevol[] 	= 	{ "pamixer", "-t", NULL};
 
 // multimedia
 //static const char *pav[] = 		{ "pavucontrol", NULL};
-static const char *playpause[] 	= 	{ "playerctl", "play-pause", NULL};
+static const char *playpause[] 		= 	{ "playerctl", "play-pause", NULL};
 static const char *next[] 		= 	{ "playerctl", "next", NULL};
-static const char *previous[] 	= 	{ "playerctl", "previous", NULL};
+static const char *previous[] 		= 	{ "playerctl", "previous", NULL};
 static const char *stop[] 		= 	{ "playerctl", "stop", NULL};
 
 
@@ -87,20 +87,20 @@ static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_gray
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_d,      	spawn,          {.v = dmenucmd } },
-	{ MODKEY,            			XK_Return, 	spawn,          {.v = termcmd } },
+	{ MODKEY,            		XK_Return, 	spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_b, 		spawn,          {.v = browser } },
 	{ MODKEY|ShiftMask,             XK_i, 		spawn,          {.v = browser_private } },
-	{ MODKEY,             			XK_w, 		spawn,          {.v = firefox } },
+	{ MODKEY,             		XK_w, 		spawn,          {.v = firefox } },
 
 
-	{ 0,		XF86XK_AudioLowerVolume, 		spawn, {.v = downvol } },
-	{ 0,       	XF86XK_AudioMute, 				spawn, {.v = mutevol } },
-	{ 0,       	XF86XK_AudioRaiseVolume, 		spawn, {.v = upvol   } },
+	{ 0,		XF86XK_AudioLowerVolume, 	spawn, 		{.v = downvol } },
+	{ 0,       	XF86XK_AudioMute, 		spawn, 		{.v = mutevol } },
+	{ 0,       	XF86XK_AudioRaiseVolume, 	spawn,		{.v = upvol   } },
 
-	{ 0,       	XF86XK_AudioPlay, 				spawn, {.v = playpause } },
-	{ 0,       	XF86XK_AudioNext, 				spawn, {.v = next } },
-	{ 0,       	XF86XK_AudioPrev, 				spawn, {.v = previous } },
-	{ 0,       	XF86XK_AudioStop, 				spawn, {.v = stop } },
+	{ 0,       	XF86XK_AudioPlay, 		spawn,		{.v = playpause } },
+	{ 0,       	XF86XK_AudioNext, 		spawn,		{.v = next } },
+	{ 0,       	XF86XK_AudioPrev, 		spawn,		{.v = previous } },
+	{ 0,       	XF86XK_AudioStop, 		spawn,		{.v = stop } },
 
 
 
