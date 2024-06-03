@@ -17,7 +17,7 @@ ModKey is the Windows Key (Mod4Mask)
 # Dependencies
 
 ```sh
-sudo pacman -S alacritty dmenu firefox pamixer playerctl ttf-hack xorg
+sudo pacman -S alacritty dmenu feh firefox network-manager-applet pamixer picom playerctl ttf-hack xorg
 ```
 ## AUR
 
