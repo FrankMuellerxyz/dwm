@@ -15,12 +15,16 @@ ModKey is the Windows Key (Mod4Mask)
 + multimedia controls with x86 keys using playerctl
 
 # Dependencies
-+ alacritty
-+ brave
-+ pamixer
-+ pavucontrol
-+ pulseaudio
-+ hack font
+
+```sh
+sudo pacman -S alacritty dmenu firefox pamixer playerctl ttf-hack xorg
+```
+## AUR
+
+```sh
+thorium-browser-bin
+```
+
 
 ## gdm installation
 
